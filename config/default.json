@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb://mongodb:27017",
+    "neo4jURI": "bolt://localhost:7687"
+}

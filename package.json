@@ -1,0 +1,21 @@
+{
+  "name": "coronadashboard",
+  "version": "1.0.0",
+  "description": "Dashboard for the state of Baden-Württemberg, by fetching data from Robert Koch Institute API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Balahari Vignesh Balu",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "mongoose": "^5.9.15",
+    "neo4j-driver": "^4.0.2",
+    "redis": "^3.0.2",
+    "request": "^2.88.2"
+  }
+}

@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+    mongodb:
+        image: mongo
+        volumes:
+            - "./data:/data"
+        ports:
+            - "27017:27017"
+        networks:
+            - nodeapp-network
+    neo4j:
+        image: neo4j
+        volumes: 
+            - "./data:/data"
+            - "./log:/log"
+        ports:
+            - "7474:7474"
+            - "7473:7473"
+            - "7687:7687"
+        networks:
+            - nodeapp-network
+    # redis:
+    #     image: redis
+    #     volumes:
+    #         - "./data:/data"
+    #     ports:
+    #         - "6379:6379"
+    #     networks:
+    #         - nodeapp-network
+    node:
+        build: 
+            context: .
+            dockerfile: node.dockerfile
+        ports:
+            - "8080:8080"
+        networks:
+            - nodeapp-network
+networks:
+    nodeapp-network:
+        driver: bridge 
